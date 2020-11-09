@@ -16,4 +16,5 @@ jobs:
         with:
           node-version: 14.x
       - run: npm install
-      - run: npm run build --prefix-paths
+      - run: npm run deploy
+
