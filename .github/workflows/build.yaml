@@ -15,7 +15,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      # - run: git config --list
       - run: npm install
       - run: npm run build
+      - run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/Shunpoco/shunpoco-dev.git
+          npm run gh-pages -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
 
