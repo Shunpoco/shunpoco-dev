@@ -22,7 +22,7 @@ export default function Template({
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownReamrk(frontmatter: { slug: { eqL $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
