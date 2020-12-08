@@ -1,0 +1,11 @@
+name: Hoge
+
+on: push
+
+jobs:
+  hoge:
+    name: hoge
+    runs-on: ubuntu-20.04
+
+    steps:
+    - run: ls
