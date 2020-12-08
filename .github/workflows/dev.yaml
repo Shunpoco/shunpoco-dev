@@ -2,8 +2,8 @@ name: dev
 
 on: 
   push:
-    paths-ignore:
-    - 'main'
+    branches-ignore:
+    - main
 
 jobs:
   dev:
