@@ -1,0 +1,21 @@
+name: dev
+
+on: 
+  push:
+    branches-ignore:
+    - main
+
+jobs:
+  dev:
+    name: dev
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install packages
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: npm install
+    - run: |
+        npm run build
