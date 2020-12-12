@@ -21,5 +21,10 @@ This repository is source of [Shunpoco.dev](https://www.shunpoco.dev)
     ```
     Then, visit `localhost:8000` on your browser.
 
+4. **Deploy**
+    This repository uses the GitHub workflow.
+    When you push or merge on the main branch, CI/CD becomes running.
+    After CI/CD succeeds, new codes deploy to https://www.shunpoco.dev .
+
 If you have any questions or find any bugs, please make an issue.
 I welcome your contributions!
