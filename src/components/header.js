@@ -33,6 +33,7 @@ const Header = ({ siteTitle }) => (
             to="/"
             style={{
               color: `white`,
+              fontWeight: `bold`,
             }}
           >
             Home
@@ -42,6 +43,7 @@ const Header = ({ siteTitle }) => (
             to="/about"
             style={{
               color: `white`,
+              fontWeight: `bold`,
             }}
           >
             About
