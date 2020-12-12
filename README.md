@@ -1,5 +1,4 @@
 ![prd](https://github.com/Shunpoco/shunpoco-dev/workflows/prd/badge.svg)
-![dev](https://github.com/Shunpoco/shunpoco-dev/workflows/dev/badge.svg)
 ## 🚀 shunpoco-dev 🚀
 This repository is source of [Shunpoco.dev](https://www.shunpoco.dev)
 
