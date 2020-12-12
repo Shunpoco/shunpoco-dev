@@ -5,9 +5,10 @@ import SEO from '../components/seo';
 
 const About = () => (
   <Layout>
-    <SEO title="About me" />
+    <SEO title="About" />
     <h1>About me</h1>
   </Layout>
 )
 
 export default About;
+h
