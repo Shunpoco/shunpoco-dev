@@ -1,3 +1,8 @@
+![prd](https://github.com/Shunpoco/shunpoco-dev/workflows/prd/badge.svg)
+![dev](https://github.com/Shunpoco/shunpoco-dev/workflows/dev/badge.svg)
+## shunpoco-dev
+A repository for [Shunpoco.dev](https://www.shunpoco.dev)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
