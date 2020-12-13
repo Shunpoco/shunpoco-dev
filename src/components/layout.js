@@ -35,9 +35,10 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer style={{
-          marginTop: `2rem`
+          marginTop: `2rem`,
+          textAlign: `center`,
         }}>
-          © {new Date().getFullYear()}, Built with
+          Shunpoco.dev © {new Date().getFullYear()}, Shunpoco. Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
