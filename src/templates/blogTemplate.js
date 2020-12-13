@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Image from '../components/image';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -15,6 +16,7 @@ export default function Template({
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
+          <Image filename={frontmatter.image} />
           <h2>{frontmatter.date}</h2>
           <div
             className="blog-post-content"
@@ -34,6 +36,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        image
       }
     }
   }

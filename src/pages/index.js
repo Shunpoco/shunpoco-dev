@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <div style={{
         display: `grid`,
-        gridAutoRows: `300px`,
+        gridAutoRows: `500px`,
         gridTemplateColumns: `repeat(auto-fill, 350px)`,
         gridRowGap: `30px`,
         gridColumnGap: `30px`,
@@ -39,6 +39,7 @@ const IndexPage = ({ data }) => {
           const slug = post.frontmatter.slug;
           const date = post.frontmatter.date;
           const description = post.frontmatter.description || post.excerpt;
+          const imagePath = post.frontmatter.image;
           return (
             <Outline
               key={slug}
@@ -46,6 +47,7 @@ const IndexPage = ({ data }) => {
               date={date}
               title={title}
               description={description}
+              imagePath={imagePath}
             />
           );
         })}
@@ -71,6 +73,7 @@ export const pageQuery = graphql`
           date(formatString: "YYYY-MM-DD")
           title
           description
+          image
         }
       }
     }

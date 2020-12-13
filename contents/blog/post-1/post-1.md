@@ -3,6 +3,7 @@ slug: "/blog/my-first-post"
 date: "2020-12-12"
 title: "My First Blog Post"
 description: "hogehoge"
+image: "post-1/opg.jpg"
 ---
 ### Initial post
 Hi there, my name is Shunpoco.

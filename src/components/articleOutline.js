@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const Outline = ({ slug, date, title, description }) => {
+import Image from './image';
+
+const Outline = ({ slug, date, title, description, imagePath }) => {
 
   return (
     <article
@@ -21,6 +23,7 @@ const Outline = ({ slug, date, title, description }) => {
         }}
       >
         <header>
+          <Image filename={imagePath} />
           <span
             style={{
               background: `aliceblue`,
@@ -58,6 +61,7 @@ Outline.propTypes = {
   date: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
+  imagePath: PropTypes.string,
 };
 
 export default Outline;

@@ -13,7 +13,13 @@ module.exports = {
         path: `${__dirname}/contents/assets`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        // https://github.com/gatsbyjs/gatsby/issues/21776
+        checkSupportedExtensions: false,
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
