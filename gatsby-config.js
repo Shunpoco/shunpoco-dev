@@ -35,5 +35,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: 'G-W7L5E1R6RJ',
+        head: false,
+        anonymize: true,
+      }
+    },
   ],
 }
