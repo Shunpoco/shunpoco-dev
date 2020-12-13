@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         excerpt
         frontmatter {
           slug
-          date(formatString: "YYYY-MM-DD")
+          date(formatString: "MMMM DD, YYYY")
           title
           description
           image
