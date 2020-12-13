@@ -8,6 +8,9 @@ const Outline = ({ slug, date, title, description }) => {
       className="post-list-item"
       itemScope
       itemType="http://schema.org/Article"
+      style={{
+        backgroundColor: `white`,
+      }}
     >
       <header>
         <h2>

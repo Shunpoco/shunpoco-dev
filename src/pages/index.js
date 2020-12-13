@@ -26,24 +26,30 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <ol style={{ listStyle: `none` }}>
+      <div style={{
+        display: `grid`,
+        gridAutoRows: `300px`,
+        gridTemplateColumns: `repeat(auto-fill, 350px)`,
+        gridRowGap: `30px`,
+        gridColumnGap: `30px`,
+        justifyContent: `center`,
+      }}>
         {posts.map((post) => {
           const title = post.frontmatter.title;
           const slug = post.frontmatter.slug;
           const date = post.frontmatter.date;
           const description = post.frontmatter.description || post.excerpt;
           return (
-            <li key={slug}>
-              <Outline
-                slug={slug}
-                date={date}
-                title={title}
-                description={description}
-              />
-            </li>
-          )
+            <Outline
+              key={slug}
+              slug={slug}
+              date={date}
+              title={title}
+              description={description}
+            />
+          );
         })}
-      </ol>
+      </div>
     </Layout>
   );
 }
