@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0, textAlign: `center`}}>
+      <h1 style={{ margin: 0, textAlign: `center`, marginBottom: `20px`,}}>
         <Link
           to="/"
           style={{
@@ -28,12 +28,11 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <div style={{ textAlign: `center` }}>
-        <small style={{ color: `white` }}>
+        <span style={{ color: `white`, fontWeight: `bold`, }}>
           <Link
             to="/"
             style={{
               color: `white`,
-              fontWeight: `bold`,
             }}
           >
             Home
@@ -43,12 +42,11 @@ const Header = ({ siteTitle }) => (
             to="/about"
             style={{
               color: `white`,
-              fontWeight: `bold`,
             }}
           >
             About
           </Link>
-        </small>
+        </span>
       </div>
     </div>
   </header>
