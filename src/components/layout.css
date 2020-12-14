@@ -583,3 +583,12 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.about {
+  padding-bottom: 20px;
+}
+
+.content {
+  background-color: #ffffff;
+  padding: 20px;
+}
