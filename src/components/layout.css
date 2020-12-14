@@ -583,3 +583,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.about {
+  padding-bottom: 20px;
+}

@@ -12,19 +12,15 @@ const About = () => (
         padding: `20px`,
       }}
     >
-      <div style={{
-        marginBottom: `20px`,
-      }}>
+      <div class="about">
         <h3>About me</h3>
         Hi, I'm Shunpoco, a software developer at a Japanese IT company.
         My professions are data engineering, machine learning, cloud technologies, and frontend technologies.
       </div>
-      <div style={{
-        marginBottom: `20px`,
-      }}>
+      <div class="about">
         <h3>About this blog</h3>
         In this blog, I am going to share posts on software development.
-        This blog is deployed using GitHub pages and managed in 
+        This blog is deployed using GitHub pages and managed in &nbsp;
         <a
           href="https://github.com/Shunpoco/shunpoco-dev"
           target="_blank"
@@ -32,12 +28,10 @@ const About = () => (
         >
           GitHub repository
         </a>.
-        If you have any questions or find any bugs, please let me know as an issue.
+        If you have any questions or find any bugs, please let me know as issues.
         I welcome your advice.
       </div>
-      <div style={{
-        marginBottom: `20px`,
-      }}>
+      <div class="about">
         <h3>Contact me</h3>
           <ul>
             <li>
