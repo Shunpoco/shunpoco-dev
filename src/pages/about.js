@@ -6,12 +6,7 @@ import SEO from '../components/seo';
 const About = () => (
   <Layout>
     <SEO title="About" />
-    <div
-      style={{
-        backgroundColor: `white`,
-        padding: `20px`,
-      }}
-    >
+    <div class="content">
       <div class="about">
         <h3>About me</h3>
         Hi, I'm Shunpoco, a software developer at a Japanese IT company.

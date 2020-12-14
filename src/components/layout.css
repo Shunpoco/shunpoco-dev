@@ -587,3 +587,8 @@ pre tt:after {
 .about {
   padding-bottom: 20px;
 }
+
+.content {
+  background-color: #ffffff;
+  padding: 20px;
+}
