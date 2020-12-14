@@ -39,7 +39,9 @@ const Outline = ({ slug, date, title, description, imagePath }) => {
           >
             {date}
           </span>
-          <h3>
+          <h3 style={{
+            marginTop: `5px`,
+          }}>
               <span itemProp="headline">{title}</span>
           </h3>
         </header>
