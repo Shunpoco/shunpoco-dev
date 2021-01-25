@@ -25,6 +25,9 @@ When I made a Vue component that contains a date input tag, I found that a value
 private date1!: Date;
 ```
 
+![example1](./example1.png)
+<div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">Fig.1: Time becames just a date and a type of the value is string.</div>
+
 ### Solution
 Instead of `v-model` directive, we use both `v-bind` and `v-on` directives. `v-model` is a syntax sugar of these two directives (see [the oficial docs](https://vuejs.org/v2/guide/forms.html)), we can replace `v-model` like this:
 ```html
@@ -42,6 +45,10 @@ private strToDate(str: string): Date {
 }
 ```
 Then we define a function that converts a value from string type to Date Object type, then call the function in a value of `v-on:input`, the tag can pass the value in the proper type (fig.2).
+
+![example3](./example3.png)
+<div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">Fig.2: A type of the value is object and time shows datetime.</div>
+
 
 ### Conclusion
 In order to use a date input tag with a proper type of value, we had better use both `v-bind` and `v-on:input` instead of using `v-model`.
