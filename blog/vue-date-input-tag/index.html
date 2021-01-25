@@ -33,6 +33,29 @@ The sample code of this article is <a href="https://github.com/Shunpoco/vue-ts-i
 ...
 private date1!: Date;
 </code></pre>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAA40lEQVQoz61PTQ/BUBDsbxQEryUciLQSiYOQSNzcXNC++ihF4+DzII78tDEtkpcXcXKY7O7M7GTXaMwXsMM1nDBMqs3qsNbJV10fZVeiNPFQHLmosK/JKbUg8djvnQZRDZYYnC8wCp5EfrlCnoSKHJey/gx9mobXG+T9gd7xhLQ/TTTVW+B+ajZHe3+AYUkf5iqEScGkoMPZRGiuI7SiHextBEHO0jzxnOVH3cPxFSiUQMEqPv0iQJpvpsYe4SZ9zOm+ODDDwM63wA+EMlvUY+i8euHPQKFdq8NUrvtPoP6BEvgErpdudgtkmJ8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="example1"
+        title="example1"
+        src="/static/141cfbf33e56d2075c1eae0afa350e3b/0a47e/example1.png"
+        srcset="/static/141cfbf33e56d2075c1eae0afa350e3b/8a4e8/example1.png 150w,
+/static/141cfbf33e56d2075c1eae0afa350e3b/5a46d/example1.png 300w,
+/static/141cfbf33e56d2075c1eae0afa350e3b/0a47e/example1.png 600w,
+/static/141cfbf33e56d2075c1eae0afa350e3b/38af3/example1.png 894w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">Fig.1: Time becames just a date and a type of the value is string.</div>
 <h3>Solution</h3>
 <p>Instead of <code>v-model</code> directive, we use both <code>v-bind</code> and <code>v-on</code> directives. <code>v-model</code> is a syntax sugar of these two directives (see <a href="https://vuejs.org/v2/guide/forms.html">the oficial docs</a>), we can replace <code>v-model</code> like this:</p>
 <pre><code class="language-html">&#x3C;input type="data"
@@ -49,6 +72,29 @@ private strToDate(str: string): Date {
 }
 </code></pre>
 <p>Then we define a function that converts a value from string type to Date Object type, then call the function in a value of <code>v-on:input</code>, the tag can pass the value in the proper type (fig.2).</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABAElEQVQoz52RTU7DMBSEc0ZoS2wnDUgpXAFUdhwAml87/2wQRWEDS7jbMG7qFsSui08vfn4zHjvetdaI2w5x0+6IkhxRWkzwO0hziE0K/ymBSjJcZiX3ciw3Ga6KSbsiS1PhYRzhKW0gh2fIftjh1y0EBywXVYPblxGPH58wX99Yb9+w4KGy7eE305zVBOSc6/X4Di+koW0EXT9VImgkTA1fV4hyg7iscMNexES2JyxcO13IOqfhvTNUTOgMFatiAlsl0y5Kg9meecHbUKiYzM1YzX9DZ9Qdhw4ME+G+/t5z838NDa9sE/bDyYTUHwxlxr9Y882q+mQk9Welxt3rFj/grWsjeAQS9gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="example3"
+        title="example3"
+        src="/static/3eaf5b7d2ff7133e4c5cd08f16652819/0a47e/example3.png"
+        srcset="/static/3eaf5b7d2ff7133e4c5cd08f16652819/8a4e8/example3.png 150w,
+/static/3eaf5b7d2ff7133e4c5cd08f16652819/5a46d/example3.png 300w,
+/static/3eaf5b7d2ff7133e4c5cd08f16652819/0a47e/example3.png 600w,
+/static/3eaf5b7d2ff7133e4c5cd08f16652819/4c42d/example3.png 896w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">Fig.2: A type of the value is object and time shows datetime.</div>
 <h3>Conclusion</h3>
 <p>In order to use a date input tag with a proper type of value, we had better use both <code>v-bind</code> and <code>v-on:input</code> instead of using <code>v-model</code>.</p></div></div></div></main><footer style="margin-top:2rem;text-align:center">Shunpoco.dev © <!-- -->2021<!-- -->, Shunpoco. Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W7L5E1R6RJ"></script><script>
     window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
