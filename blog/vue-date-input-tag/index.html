@@ -58,37 +58,44 @@ private date1!: Date;
 <div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">Fig.1: Time becames just a date and a type of the value is string.</div>
 <h3>Solution</h3>
 <p>Instead of <code>v-model</code> directive, we use both <code>v-bind</code> and <code>v-on</code> directives. <code>v-model</code> is a syntax sugar of these two directives (see <a href="https://vuejs.org/v2/guide/forms.html">the oficial docs</a>), we can replace <code>v-model</code> like this:</p>
-<pre><code class="language-html">&#x3C;input type="data"
-    v-bind:value="date2"
-    v-on:input="date2 = $event.target.value"
+<pre><code class="language-html">&#x3C;input type="date"
+  v-bind:value="dateToStr(date2)"
+  v-on:input="date2 = strToDate($event.target.value)"
 />
 
 ...
 
-private date2!: Date;
+  private date2!: Date;
 
-private strToDate(str: string): Date {
+  strToDate(str: string): Date {
     return new Date(str);
-}
+
+  dateToStr(date: Date): string {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1 &#x3C; 9 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
+    const day = date.getDate() &#x3C; 9 ? `0${date.getDate()}` : `${date.getDate()}`;
+    const strDate = `${year}-${month}-${day}`;
+    return strDate;
+  }
 </code></pre>
-<p>Then we define a function that converts a value from string type to Date Object type, then call the function in a value of <code>v-on:input</code>, the tag can pass the value in the proper type (fig.2).</p>
+<p>Then we define functions that converts a value from string type to Date Object type and vice versa, then call the functions in values of <code>v-bind</code> and <code>v-on:input</code>. Finally, the tag can pass the value in the proper type (fig.2).</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 35.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABAElEQVQoz52RTU7DMBSEc0ZoS2wnDUgpXAFUdhwAml87/2wQRWEDS7jbMG7qFsSui08vfn4zHjvetdaI2w5x0+6IkhxRWkzwO0hziE0K/ymBSjJcZiX3ciw3Ga6KSbsiS1PhYRzhKW0gh2fIftjh1y0EBywXVYPblxGPH58wX99Yb9+w4KGy7eE305zVBOSc6/X4Di+koW0EXT9VImgkTA1fV4hyg7iscMNexES2JyxcO13IOqfhvTNUTOgMFatiAlsl0y5Kg9meecHbUKiYzM1YzX9DZ9Qdhw4ME+G+/t5z838NDa9sE/bDyYTUHwxlxr9Y882q+mQk9Welxt3rFj/grWsjeAQS9gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 35.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAA8ElEQVQoz5VOy2rCUBTMN1ZR89LaRUS0IIjuxIUf0EWb19Xk5oaWohB0o2v/bJyEplxSKrgYBuZ1jjGTEhOVY6oUWZFzTGQGL4gxigReyAM/hPvuYxhEGIUCHlFmqiw7r2QvldgUBYy+EOjRNCno6G4TdMQOq+KIt/MF8fWK9fGEttiiR0/PWuy3dgnm+wOMIQM2BYeG88MWNTNmkR+OpcIs/8T86xvjVFWaWYJ+3XGJLgeXBw4+NwZtsp2kFSx+0vYjPH2ERIAWudRq39YGOxxcNAfrQBNupio42V+v7Pw7+PvhA7j7oX713rieaQ7eALM5bbUbwQpFAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="example3"
-        title="example3"
-        src="/static/3eaf5b7d2ff7133e4c5cd08f16652819/0a47e/example3.png"
-        srcset="/static/3eaf5b7d2ff7133e4c5cd08f16652819/8a4e8/example3.png 150w,
-/static/3eaf5b7d2ff7133e4c5cd08f16652819/5a46d/example3.png 300w,
-/static/3eaf5b7d2ff7133e4c5cd08f16652819/0a47e/example3.png 600w,
-/static/3eaf5b7d2ff7133e4c5cd08f16652819/4c42d/example3.png 896w"
+        alt="example2"
+        title="example2"
+        src="/static/7a3b934ea5888e10272e582d06858c27/0a47e/example2.png"
+        srcset="/static/7a3b934ea5888e10272e582d06858c27/8a4e8/example2.png 150w,
+/static/7a3b934ea5888e10272e582d06858c27/5a46d/example2.png 300w,
+/static/7a3b934ea5888e10272e582d06858c27/0a47e/example2.png 600w,
+/static/7a3b934ea5888e10272e582d06858c27/6c745/example2.png 893w"
         sizes="(max-width: 600px) 100vw, 600px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
