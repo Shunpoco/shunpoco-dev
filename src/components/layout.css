@@ -11,6 +11,7 @@ body {
   color: hsla(0, 0%, 0%, 0.8);
   font-family: "DM Serif Display";
   font-weight: normal;
+  font-size: 20px;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
