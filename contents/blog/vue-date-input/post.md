@@ -31,22 +31,29 @@ private date1!: Date;
 ### Solution
 Instead of `v-model` directive, we use both `v-bind` and `v-on` directives. `v-model` is a syntax sugar of these two directives (see [the oficial docs](https://vuejs.org/v2/guide/forms.html)), we can replace `v-model` like this:
 ```html
-<input type="data"
-	v-bind:value="date2"
-	v-on:input="date2 = $event.target.value"
+<input type="date"
+  v-bind:value="dateToStr(date2)"
+  v-on:input="date2 = strToDate($event.target.value)"
 />
 
 ...
 
-private date2!: Date;
+  private date2!: Date;
 
-private strToDate(str: string): Date {
-	return new Date(str);
-}
+  strToDate(str: string): Date {
+    return new Date(str);
+
+  dateToStr(date: Date): string {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1 < 9 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
+    const day = date.getDate() < 9 ? `0${date.getDate()}` : `${date.getDate()}`;
+    const strDate = `${year}-${month}-${day}`;
+    return strDate;
+  }
 ```
-Then we define a function that converts a value from string type to Date Object type, then call the function in a value of `v-on:input`, the tag can pass the value in the proper type (fig.2).
+Then we define functions that converts a value from string type to Date Object type and vice versa, then call the functions in values of `v-bind` and `v-on:input`. Finally, the tag can pass the value in the proper type (fig.2).
 
-![example3](./example3.png)
+![example2](./example2.png)
 <div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">Fig.2: A type of the value is object and time shows datetime.</div>
 
 
