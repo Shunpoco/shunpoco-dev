@@ -23,7 +23,7 @@ const Image = ({ filename }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 200) {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -41,7 +41,7 @@ const Image = ({ filename }) => (
         return;
       }
       const imageSizes = image.node.childImageSharp.fluid;
-      return <Img fluid={imageSizes} />
+      return <Img fluid={imageSizes} style={{ maxHeight: '200px', }}/>
     }}
   />
 );
