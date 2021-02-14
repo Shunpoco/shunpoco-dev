@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://www.shunpoco.dev',
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
     {
