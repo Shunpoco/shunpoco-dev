@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.shunpoco.dev/sitemap.xml
+Host: https://www.shunpoco.dev
