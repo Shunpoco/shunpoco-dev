@@ -3,8 +3,10 @@ module.exports = {
     title: `Shunpoco.dev`,
     description: ``,
     author: `Shunpoco`,
+    siteUrl: 'https://www.shunpoco.dev',
   },
   plugins: [
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

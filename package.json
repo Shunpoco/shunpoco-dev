@@ -12,6 +12,7 @@
     "gatsby-plugin-manifest": "^2.5.2",
     "gatsby-plugin-offline": "^3.3.2",
     "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sharp": "^2.7.1",
     "gatsby-remark-images": "^3.10.0",
     "gatsby-source-filesystem": "^2.4.1",
