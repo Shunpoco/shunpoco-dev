@@ -9,7 +9,7 @@ image: "vue-date-input/vue-logo.png"
 <div style="text-align: center; font-size: 14px; color: grey; margin-bottom: 20px;">this picture is from <a href="https://vuejs.org/" style="text-decoration: none;" >here</a>
 </div>
 
-Hi there, in this article, I introduce you how to use a date input tag in the proper way with Vue.js.
+In this article, I introduce you how to use a date input tag in the proper way with Vue.js.
 The sample code of this article is [here](https://github.com/Shunpoco/vue-ts-input-values-demo).
 
 ### Problem
